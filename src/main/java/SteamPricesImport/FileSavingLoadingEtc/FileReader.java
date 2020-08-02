@@ -23,7 +23,6 @@ public class FileReader {
                 readItems.add(item);
             } while (item != null);
         } catch (ClassNotFoundException | IOException e) {
-            System.out.println("Error");
         }
         if (!readItems.isEmpty()) System.out.println("Wczytano dane");
         return readItems;
