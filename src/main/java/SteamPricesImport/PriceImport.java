@@ -31,6 +31,7 @@ public class PriceImport {
         PrintPrices printPrices = new PrintPrices();
         printPrices.printPrices();
 
+      System.out.println("test");
 
     }
 }
