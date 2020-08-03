@@ -1,4 +1,4 @@
-package SteamPricesImport.Array.ItemsArray.AddItemToList;
+package SteamPricesImport.AddItemToList;
 
 import SteamPricesImport.Array.ItemsArray.ItemsArray;
 import SteamPricesImport.Item.Item;

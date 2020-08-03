@@ -1,11 +1,9 @@
 package SteamPricesImport;
-import SteamPricesImport.Array.ItemsArray.AddItemToList.AddItemToList;
-import SteamPricesImport.Array.ItemsArray.AddItemToList.AddItemToListFROMUSER;
+import SteamPricesImport.AddItemToList.AddItemToList;
 import SteamPricesImport.Array.ItemsArray.ItemsArray;
 import SteamPricesImport.FileSavingLoadingEtc.FileWriter;
 import SteamPricesImport.Item.Item;
-import SteamPricesImport.PricePrinting.PrintPrices;
-import java.io.IOException;
+import SteamPricesImport.Printing.PricePrinting.PrintPrices;
 
 public class PriceImport {
 
@@ -13,8 +11,8 @@ public class PriceImport {
 
     public static void main(String[] args) {
 
-      MainLoop mainLoop = new MainLoop();
-      mainLoop.mainLoop();
+//      MainLoop mainLoop = new MainLoop();
+//      mainLoop.mainLoop();
 
       AddItemToList addItemToList = new AddItemToList();
       addItemToList.addItemToList(new Item("730", "AK-47 | Redline (Field-Tested)", 32));
@@ -27,6 +25,8 @@ public class PriceImport {
 
 //      AddItemToListFROMUSER addItemToListFROMUSER = new AddItemToListFROMUSER();
 //      addItemToListFROMUSER.addItemToListFROMUSER();
+     ItemsArray.items.remove(2);
+
       FileWriter fileWriter = new FileWriter();
       fileWriter.writeFile(ItemsArray.items);
 

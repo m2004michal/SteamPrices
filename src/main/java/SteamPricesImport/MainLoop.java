@@ -1,7 +1,11 @@
 package SteamPricesImport;
 
-import SteamPricesImport.PricePrinting.PrintPrices;
+import SteamPricesImport.AddItemToList.AddItemToListFROMUSER;
+import SteamPricesImport.Array.ItemsArray.ItemsArray;
+import SteamPricesImport.Item.Item;
+import SteamPricesImport.Printing.PricePrinting.PrintPrices;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainLoop {
@@ -16,6 +20,12 @@ public class MainLoop {
             switch (option) {
                 case 0:
                 PrintPrices.printPrices();
+                case 1:
+                    AddItemToListFROMUSER addItemToListFROMUSER = new AddItemToListFROMUSER();
+                    addItemToListFROMUSER.addItemToListFROMUSER();
+                case 2:
+
+                    ItemsArray.items.remove(2);
                 case 5:
                     loop = -1;
                     scanner.close();
@@ -26,7 +36,10 @@ public class MainLoop {
         }
 
     }
-    public void printOptions(){
-        System.out.println("[0]" + " - Print prices of followed items");
+
+    public ArrayList<Item> deleteItem(){
+
+        return ItemsArray.items;
     }
+
 }

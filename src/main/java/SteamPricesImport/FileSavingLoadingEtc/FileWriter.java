@@ -1,6 +1,5 @@
 package SteamPricesImport.FileSavingLoadingEtc;
 
-import SteamPricesImport.Array.ItemsArray.ItemsArray;
 import SteamPricesImport.Item.Item;
 import java.io.FileOutputStream;
 import java.io.IOException;

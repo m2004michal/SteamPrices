@@ -1,4 +1,4 @@
-package SteamPricesImport.PricePrinting;
+package SteamPricesImport.Printing.PricePrinting;
 
 import SteamPricesImport.FileSavingLoadingEtc.FileReader;
 import SteamPricesImport.Item.Item;
