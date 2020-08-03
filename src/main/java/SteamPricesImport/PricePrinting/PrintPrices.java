@@ -6,7 +6,7 @@ import SteamPricesImport.ReadingFromUrl.JsonReader;
 
 public class PrintPrices {
 
-    public void printPrices() {
+    public static void printPrices() {
         FileReader fileReader = new FileReader();
         fileReader.readFile();
         JsonReader jsonReader = new JsonReader();
