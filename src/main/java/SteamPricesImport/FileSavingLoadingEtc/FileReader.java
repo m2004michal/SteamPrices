@@ -1,5 +1,6 @@
 package SteamPricesImport.FileSavingLoadingEtc;
 
+import SteamPricesImport.Array.ItemsArray.ItemsArray;
 import SteamPricesImport.Item.Item;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -20,12 +21,13 @@ public class FileReader {
             Item item;
             do {
                 item = (Item) ois.readObject();
-                readItems.add(item);
+                ItemsArray.items.add(item);
             } while (item != null);
         } catch (ClassNotFoundException | IOException e) {
         }
-        if (!readItems.isEmpty()) System.out.println("Wczytano dane");
-        return readItems;
+        if (!ItemsArray.items.isEmpty()) System.out.println("Wczytano dane");
+
+        return ItemsArray.items;
     }
 
 }

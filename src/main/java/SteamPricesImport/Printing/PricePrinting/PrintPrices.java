@@ -1,5 +1,6 @@
 package SteamPricesImport.Printing.PricePrinting;
 
+import SteamPricesImport.Array.ItemsArray.ItemsArray;
 import SteamPricesImport.FileSavingLoadingEtc.FileReader;
 import SteamPricesImport.Item.Item;
 import SteamPricesImport.ReadingFromUrl.JsonReader;
@@ -11,7 +12,7 @@ public class PrintPrices {
         fileReader.readFile();
         JsonReader jsonReader = new JsonReader();
 
-        for (Item i : fileReader.readItems) {
+        for (Item i : ItemsArray.items) {
             try {
                 System.out.println(jsonReader.readPriceFromName(i.getId(), i.getMarketHashName()));
             }catch (RuntimeException e){
