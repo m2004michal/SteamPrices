@@ -1,4 +1,4 @@
-package SteamPricesImport.AddItemToList;
+package SteamPricesImport.EditingList.AddItemToList;
 
 import SteamPricesImport.Array.ItemsArray.ItemsArray;
 import SteamPricesImport.Item.Item;
@@ -23,7 +23,6 @@ public class AddItemToListFROMUSER {
         quantity = scanner.nextInt();
         Item item = new Item(id, MarketHashName, quantity);
         addItemToList.addItemToList(item);
-        scanner.close();
         return ItemsArray.items;
     }
 

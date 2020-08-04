@@ -1,51 +1,66 @@
 package SteamPricesImport;
 
-import SteamPricesImport.AddItemToList.AddItemToList;
-import SteamPricesImport.AddItemToList.AddItemToListFROMUSER;
+import SteamPricesImport.EditingList.AddItemToList.AddItemToList;
+import SteamPricesImport.EditingList.AddItemToList.AddItemToListFROMUSER;
 import SteamPricesImport.Array.ItemsArray.ItemsArray;
-import SteamPricesImport.FileSavingLoadingEtc.FileReader;
+import SteamPricesImport.EditingList.RemoveItemFromList.RemoveItemFromList;
 import SteamPricesImport.GetItemIndex.GetItemIndex;
 import SteamPricesImport.Item.Item;
+import SteamPricesImport.FileSavingLoadingEtc.FileReader;
+import SteamPricesImport.Printing.OptionsPrinting.PrintOptions;
 import SteamPricesImport.Printing.PricePrinting.PrintPrices;
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainLoop {
 
+    FileReader fileReader = new FileReader();
+
     public void mainLoop() {
         int loop = 0;
-        Scanner scanner = new Scanner(System.in);
+
+
+        final int option0 = 0;
+        final int option1 = 1;
+        final int option2 = 2;
+        final int option5 = 5;
+
+        fileReader.readFile();
 
         while (loop != -1) {
 
-            int option = scanner.nextInt();
+            PrintOptions.printOptions();
+            Scanner s = new Scanner(System.in);
+            int option = s.nextInt();
+
             switch (option) {
-                case 0:
+                case option0:
                     PrintPrices.printPrices();
-                case 1:
+                    break;
+                case option1:
                     AddItemToListFROMUSER addItemToListFROMUSER = new AddItemToListFROMUSER();
                     addItemToListFROMUSER.addItemToListFROMUSER();
-                case 2:
-
-                    ItemsArray.items.remove(2);
-                case 5:
+                    break;
+                case option2:
+                    RemoveItemFromList.deleteItem();
+                    break;
+                case option5:
                     loop = -1;
-                    scanner.close();
-
-
+                    break;
+                default:
+                    System.out.println("There is no such option");
+                    s.close();
             }
 
         }
 
     }
 
-//    public ArrayList<Item> deleteItem(){
-//        Scanner scanner = new Scanner(System.in);
-//
-//        ItemsArray.items.remove()
-//        return ItemsArray.items;
-//    }
+
 
 
 

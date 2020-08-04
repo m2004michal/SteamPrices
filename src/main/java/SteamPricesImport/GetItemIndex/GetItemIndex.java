@@ -4,16 +4,15 @@ import SteamPricesImport.Array.ItemsArray.ItemsArray;
 import SteamPricesImport.FileSavingLoadingEtc.FileReader;
 import SteamPricesImport.Item.Item;
 
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class GetItemIndex {
 
     public int getItemIndex() {
-        FileReader fileReader = new FileReader();
-        fileReader.readFile();
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter items name");
-        String name = scanner.nextLine();
+        String name = sc.nextLine();
         int index = 0;
         for (Item item : ItemsArray.items) {
             if (item.getMarketHashName().equals(name)) {

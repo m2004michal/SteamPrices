@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class FileWriter {
 
-    public void writeFile(ArrayList<Item> items) {
+    public static void writeFile(ArrayList<Item> items) {
 
         String fileName = "followedItems.txt";
 
@@ -21,10 +21,10 @@ public class FileWriter {
                 os.writeObject(item);
             }
 
-            System.out.println("Zapisano obiekt do pliku");
+            System.out.println("Succesfuly saved file");
 
         } catch (IOException e) {
-            System.err.println("Bład zapisu pliku " + fileName);
+            System.err.println("Error occured while trying to save:  " + fileName);
             e.printStackTrace();
         }
     }

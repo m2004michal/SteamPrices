@@ -8,8 +8,6 @@ import SteamPricesImport.ReadingFromUrl.JsonReader;
 public class PrintPrices {
 
     public static void printPrices() {
-        FileReader fileReader = new FileReader();
-        fileReader.readFile();
         JsonReader jsonReader = new JsonReader();
 
         for (Item i : ItemsArray.items) {
