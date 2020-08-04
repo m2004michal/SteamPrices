@@ -1,10 +1,8 @@
 package SteamPricesImport.GetItemIndex;
 
 import SteamPricesImport.Array.ItemsArray.ItemsArray;
-import SteamPricesImport.FileSavingLoadingEtc.FileReader;
 import SteamPricesImport.Item.Item;
 
-import java.util.Comparator;
 import java.util.Scanner;
 
 public class GetItemIndex {

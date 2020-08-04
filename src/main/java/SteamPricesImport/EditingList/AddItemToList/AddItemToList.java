@@ -1,7 +1,6 @@
 package SteamPricesImport.EditingList.AddItemToList;
 
 import SteamPricesImport.Array.ItemsArray.ItemsArray;
-import SteamPricesImport.FileSavingLoadingEtc.FileReader;
 import SteamPricesImport.FileSavingLoadingEtc.FileWriter;
 import SteamPricesImport.Item.Item;
 

@@ -8,7 +8,6 @@ import java.util.Scanner;
 
 public class AddItemToListFROMUSER {
 
-
     public ArrayList<Item> addItemToListFROMUSER() {
         String id;
         String MarketHashName;

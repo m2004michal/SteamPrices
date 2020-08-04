@@ -1,19 +1,13 @@
-package SteamPricesImport;
+package SteamPricesImport.EditingList.MainLoop;
 
-import SteamPricesImport.EditingList.AddItemToList.AddItemToList;
 import SteamPricesImport.EditingList.AddItemToList.AddItemToListFROMUSER;
-import SteamPricesImport.Array.ItemsArray.ItemsArray;
 import SteamPricesImport.EditingList.RemoveItemFromList.RemoveItemFromList;
-import SteamPricesImport.GetItemIndex.GetItemIndex;
-import SteamPricesImport.Item.Item;
+import SteamPricesImport.FileSavingLoadingEtc.IsFileCreated;
 import SteamPricesImport.FileSavingLoadingEtc.FileReader;
 import SteamPricesImport.Printing.OptionsPrinting.PrintOptions;
 import SteamPricesImport.Printing.PricePrinting.PrintPrices;
-import java.util.*;
-import java.lang.*;
-import java.io.*;
 
-import java.util.ArrayList;
+import java.lang.*;
 import java.util.Scanner;
 
 public class MainLoop {
@@ -22,12 +16,12 @@ public class MainLoop {
 
     public void mainLoop() {
         int loop = 0;
-
-
         final int option0 = 0;
         final int option1 = 1;
         final int option2 = 2;
         final int option5 = 5;
+        IsFileCreated isFileCreated = new IsFileCreated();
+        isFileCreated.isFileCreated();
 
         fileReader.readFile();
 
@@ -55,20 +49,6 @@ public class MainLoop {
                     System.out.println("There is no such option");
                     s.close();
             }
-
         }
-
-    }
-
-
-
-
-
-    public static void main(String[] args) {
-        AddItemToList addItemToList = new AddItemToList();
-        GetItemIndex getItemIndex = new GetItemIndex();
-        System.out.println(
-                getItemIndex.getItemIndex()
-        );
     }
 }

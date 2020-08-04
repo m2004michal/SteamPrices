@@ -2,14 +2,13 @@ package SteamPricesImport.FileSavingLoadingEtc;
 
 import SteamPricesImport.Array.ItemsArray.ItemsArray;
 import SteamPricesImport.Item.Item;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
 public class FileReader {
-
-    public ArrayList<Item> readItems = new ArrayList<>();
 
     public ArrayList<Item> readFile() {
 
