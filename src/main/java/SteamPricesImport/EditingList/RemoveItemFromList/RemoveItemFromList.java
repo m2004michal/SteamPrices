@@ -1,7 +1,6 @@
 package SteamPricesImport.EditingList.RemoveItemFromList;
 
 import SteamPricesImport.Array.ItemsArray.ItemsArray;
-import SteamPricesImport.GetItemIndex.GetItemIndex;
 import SteamPricesImport.Item.Item;
 
 import java.util.ArrayList;

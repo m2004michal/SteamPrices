@@ -30,7 +30,7 @@ public class JsonReader {
         }
     }
 
-    public String readPriceFromName(String id, String market_hash_name) {
+    public String readPriceAndNameFromName(String id, String market_hash_name) {
         String lowestPrice;
         try {
             JSONObject json = readJsonFromUrl(UrlCreator.createURL(id, market_hash_name));
@@ -39,6 +39,20 @@ public class JsonReader {
             throw new RuntimeException(e);
         }
         return lowestPrice;
+    }
+    public String readPriceFromName(String id, String market_hash_name) {
+        String lowestPrice;
+        try {
+            JSONObject json = readJsonFromUrl(UrlCreator.createURL(id, market_hash_name));
+            lowestPrice = json.get("lowest_price").toString();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return lowestPrice;
+    }
+    public static String returnPriceString(String id, String marketName){
+        JsonReader jsonReader = new JsonReader();
+        return jsonReader.readPriceFromName(id, marketName);
     }
 
 
