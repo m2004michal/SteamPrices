@@ -2,7 +2,7 @@ package SteamPricesImport;
 
 import SteamPricesImport.EditingList.MainLoop.MainLoop;
 
-public class Main {
+public class main {
 
 
     public static void main(String[] args) {
