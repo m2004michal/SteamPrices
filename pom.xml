@@ -4,10 +4,24 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>org.example</groupId>
     <artifactId>SteamPricesTracker</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.4.0</version>
+                <configuration>
+                    <mainClass>SteamPricesImport.SteamTrackerMain</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+
 
     <properties>
         <maven.compiler.target>11</maven.compiler.target>
